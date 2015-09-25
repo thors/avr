@@ -1,11 +1,11 @@
-SOURCES=src/port_test.c
+SOURCES=src/box_clock.c
 
 MMCU=attiny85
 AVRDUDE_TARGET=t85
 
 OBJFILES=$(subst .c,.o,$(SOURCES))
 ASMFILES=$(subst .c,.o.s,$(SOURCES))
-TARGET=blinker
+TARGET=box_clock
 GCC=avr-gcc
 OBJCPY=avr-objcopy
 CFLAGS= -mmcu=$(MMCU) -DF_CPU=1000000 -Wall -O0 -g
